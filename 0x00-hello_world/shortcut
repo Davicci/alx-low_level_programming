@@ -1,0 +1,4 @@
+#!/bin/bash
+read newfile
+vim $newfile
+chmod u+x $newfile
