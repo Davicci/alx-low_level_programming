@@ -8,7 +8,7 @@ void print_times_table(int n)
 {
 	if (n >= 0 && n <= 15)
 	{
-	int l, m;
+	int l, m, o;
 
 	for (l = 0; l <= n; l++)
 
@@ -17,6 +17,7 @@ void print_times_table(int n)
 	{
 	int result = l * m;
 
+	o = l * m
 	if (m == 0)
 	printf("%d", result);
 	else
