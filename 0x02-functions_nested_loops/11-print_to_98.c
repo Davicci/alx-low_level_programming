@@ -2,26 +2,28 @@
 #include <stdio.h>
 /**
  * print_to_98 - prints all natural num
+ *
  * @n: num to print from
+ *
  * Return: numbers
  */
 void print_to_98(int n)
 {
-	if (a > 98)
+	if (n > 98)
 	{
-	while (a > 98)
+	while (n > 98)
 	{
-	printf("%d, ", a);
-	a--;
+	printf("%d, ", n);
+	n--;
 	}
 	}
 	else
 	{
-	while (a < 98)
+	while (n < 98)
 	{
-	printf("%d, ", a);
-	a++;
+	printf("%d, ", n);
+	n++;
 	}
 	}
-	printf("%d\n", a);
+	printf("%d\n", n);
 }
