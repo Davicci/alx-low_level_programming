@@ -1,55 +1,43 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_times_table - prints the times table
- *
- * @n: integer for which the times table will be printed
- *
- * Description: prints the times table
- *
- * Return: void
+ * main - finds and prints the first 98 Fibonacci numbers,
+ * starting with 1 and 2
+ * followed by a new line
+ * Return: ALways 0 (Success)
  */
-
-void print_times_table(int n)
+int main(void)
 {
-	int row, column, product;
+	unsigned long int i, j, k, j1, j2, k1, k2;
 
-	if (n >= 0 && n < 15)
+	j = 1;
+	k = 2;
+
+	printf("%lu", j);
+
+	for (i = 1; i < 91; i++)
 	{
-		for (row = 0; row <= n; row++)
-		{
-			for (column = 0; column <= n; column++)
-			{
-				product = row * column;
-
-				if (column == 0)
-					_putchar('0');
-				else if (product < 10)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(product % 10 + '0');
-				}
-				else if (product >= 10 && product < 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((product / 10) % 10 + '0');
-					_putchar(product % 10 + '0');
-				}
-				else if (product > 99 && product < 1000)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(product / 100 + '0');
-					_putchar((product / 10) % 10 + '0');
-					_putchar(product % 10 + '0');
-				}
-			}
-			_putchar('\n');
-		}
+		printf(", %lu", k);
+		k = k + j;
+		j = k - j;
 	}
+
+	j1 = j / 1000000000;
+	j2 = j % 1000000000;
+	k1 = k / 1000000000;
+	k2 = k % 1000000000;
+
+	for (i = 92; i < 99; ++i)
+	{
+		printf(", %lu", k1 + (k2 / 1000000000));
+		printf("%lu", k2 % 1000000000);
+		k1 = k1 + j1;
+		j1 = k1 - j1;
+		k2 = k2 + j2;
+		j2 = k2 - j2;
+	}
+
+	printf("\n");
+
+	return (0);
 }
